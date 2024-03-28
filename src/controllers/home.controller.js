@@ -1,4 +1,4 @@
-function homePingConroller() {
+function homePingConroller(req, res) {
     //collect the req
     //send it to server
     //and then prepare and send response
