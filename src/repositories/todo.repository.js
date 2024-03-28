@@ -1,9 +1,9 @@
-const todos = [];
+const todos = []; // in memory db
 
-class TodoRepository{
+class TodoRepository {
 
     insert(todoText) {
-        todoText.push({id: todos.length, text:todoText});  
+        todos.push({id: todos.length, text: todoText});
     }
 
     getAll() {
@@ -11,6 +11,10 @@ class TodoRepository{
     }
 
     get(id) {
-        return todos.filter(todo => todo.id ==id)[0];
+        return todos.filter(todo => todo.id == id)[0];
     }
+
 }
+
+
+module.exports = TodoRepository;

@@ -1,7 +1,9 @@
 const express = require('express');
-const homePingConroller = require('../../controllers/home.controller');
+const homePingController = require('../../controllers/home.controller');
 
-const routes = express.Router();
-router.get('/ping', homePingConroller);
+const router = express.Router();
+
+router.get('/ping', homePingController); // /ping
+
 
 module.exports = router;

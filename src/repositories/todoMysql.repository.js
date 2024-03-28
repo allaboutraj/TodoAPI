@@ -1,17 +1,18 @@
-class TodoMySQLRepository{
-    //Below code will not work its Demo 
+class TodoMySQLRepository {
+    // below code will not work it is for demo
     insert(todoText) {
-        // todoText.push({id: todos.length, text:todoText}); 
-        mysql.exec(`INSERT INTO TODOS (todoText) VALUE (${todoText})`); 
+        mysql.exec(`INSERT INTO TODOS (todoText) VALUES (${todoText})`)
     }
 
     getAll() {
-        mysql.exec(`SELECT * FROM TODOS`);
+        mysql.exec(`SELECT * FROM TODOS;`)
     }
 
     get(id) {
-        mysql.exec(`SELECT * FROM TODOS WHERE id =${id});
+        mysql.exec(`SELECT * FROM TODOS WHERE id = ${id};`)
     }
+
 }
+
 
 module.exports = TodoMySQLRepository;
